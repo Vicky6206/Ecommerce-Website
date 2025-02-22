@@ -1,0 +1,252 @@
+*{
+   padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    width: 98%;
+    margin: 10px auto;
+    padding: 2px;
+}
+header{
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    display: flex;   
+    align-items: center;
+    justify-content: space-between;  
+}
+header div{
+    display: flex;
+}
+header div p{
+width: 100px;
+height: 40px; 
+line-height: 40px;
+cursor: pointer;
+margin: 0 10px;
+text-align: center;
+}
+header div p span{
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 0 0 0 2px;
+}
+header div p.active{
+    background-color: #00ffc4;
+    color: white;
+}
+header form{
+    position: relative;
+}
+header form input{
+    padding: 12px 15px;
+    border: none;
+    width: 300px;
+    outline: none;
+    border-radius: 25px;
+    background: whitesmoke;
+}
+
+header form i.fa{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: royalblue;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 20px;;
+}
+header form i.record{
+    background-color: white;
+    animation: voice-recording 1s infinite;
+}
+@keyframes voice-recording {
+    0%{
+        box-shadow: 0 0 5px red;
+    }
+    50%{
+        box-shadow: 0 0 10px 10px red;
+    }
+    100%{
+        box-shadow: 0 0 5px red;
+    }
+}
+
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+    /* padding-left: 400px; */
+}
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+    
+}
+.slides input{
+    display: none; 
+    
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+.navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background: black;
+} 
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+.navigation-auto div{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px; 
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: black;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: black;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: black;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: black;
+}
+
+main{
+    width: 90%;
+    margin: 5px auto;
+}
+main ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+main ul li{
+    list-style: none;
+    width: 23.4%;
+    height: 500PX;
+    padding: 20PX;
+    margin: 10PX;
+    border-radius: 10PX;
+    transition: 0.5s all;
+    background: whitesmoke;
+    overflow: hidden;
+}
+li img{
+    width: 100%;
+    height: 58%;
+}
+li .detail h2,
+li .detail p,
+li .detail h4{
+    padding: 10px;
+    
+}
+li .icon{
+    height: 40px;
+    margin: 10px auto;
+}
+.icon span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: #00000030;
+    display: inline;
+    text-align: center;
+    margin: 0 0 0 20px;
+    float: right;
+    border-radius: 5px;
+    color: white;
+}
+.icon span:hover{
+    background: #3a9aa3;
+    cursor: pointer;
+}
+ul.list-display li{
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+ul.list-display li img{
+    width: auto;
+    width: 300px;
+    margin-right: 50px;
+} 
+ul.list-display li .detail h2,
+ul.list-display li .detail p,
+ul.list-display li .detail h4{
+    font-size: 30px;
+    line-height: 30px;
+    margin: 10px auto;
+}
+ul.list-display li .detail p,
+ul.list-display li .detail h4{
+font-size: 20px;
+
+}
+ul.list-display li .icon{
+    width: 150px;
+    height: auto;
+}
+ul.list-display li .icon span{
+display: block;
+margin: 50px auto;
+float: initial;
+font-size: 20px; 
+width: 35px;
+height: 35px;
+line-height: 35px;
+
+}
